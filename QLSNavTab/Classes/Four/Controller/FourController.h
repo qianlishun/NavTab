@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FourViewController.h
 //  QLSNavTab
 //
 //  Created by Mr.Q on 16/5/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FourController : UITableViewController
 
 @end
-
