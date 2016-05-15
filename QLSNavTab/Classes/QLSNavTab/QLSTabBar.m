@@ -22,11 +22,13 @@
     [item setTitle:title forState:UIControlStateNormal];
     item.titleLabel.textColor = [UIColor lightGrayColor];
 
-
     // 图标
+    if (icon) {
     [item setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+    }
+    if (icon_selected) {
     [item setImage:[UIImage imageNamed:icon_selected] forState:UIControlStateSelected];
-
+    }
     // 监听点击
     [item addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchDown];
 
