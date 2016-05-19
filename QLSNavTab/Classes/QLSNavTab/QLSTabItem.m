@@ -39,7 +39,10 @@
     CGFloat imageX = 0;
     CGFloat imageY = 0;
     CGFloat imageW = contentRect.size.width;
-    CGFloat imageH = contentRect.size.height * (1-kTitleRatio);
+    CGFloat imageH = contentRect.size.height;
+    if (self.titleLabel.text.length) {
+        imageH = contentRect.size.height * (1-kTitleRatio);
+    }
     return CGRectMake(imageX, imageY, imageW, imageH);
 
 }
