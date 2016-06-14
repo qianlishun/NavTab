@@ -91,17 +91,6 @@
             UIViewController *vc = [sb instantiateViewControllerWithIdentifier:[dict objectForKey:VC_STORYBOARD]];
 
             nav = [[QLSNavigationController alloc]initWithRootViewController:vc];
-
-            //            if ([vc isKindOfClass:[UITableViewController class]]) {
-            //                nav = [[QLSNavigationController alloc]initWithRootViewController:(UITableViewController *)vc];
-            //                NSLog(@"table");
-            //            }else if([vc isKindOfClass:[UICollectionViewController class]]){
-            //                nav = [[QLSNavigationController alloc]initWithRootViewController:(UICollectionViewController *)vc];
-            //                NSLog(@"collection");
-            //            }else {
-            //                nav = [[QLSNavigationController alloc]initWithRootViewController:(UIViewController *)vc];
-            //                NSLog(@"view");
-            //            }
         }
 
         [self addChildViewController:nav];
