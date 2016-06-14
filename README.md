@@ -1,5 +1,5 @@
 # QLSNavTab
-  NavTab框架
+  NavigationController + UITabBarController框架
 
 ###效果图:
 
