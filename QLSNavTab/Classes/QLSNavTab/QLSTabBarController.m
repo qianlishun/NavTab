@@ -93,21 +93,28 @@
             nav = [[QLSNavigationController alloc]initWithRootViewController:vc];
         }
 
+        if (self.navigationBackgroundColor) {
+            [nav.navigationBar setBarTintColor:self.navigationBackgroundColor];
+        }
+
+        if (self.navigationBackgroundImage) {
+            [nav.navigationBar setBackgroundImage:self.navigationBackgroundImage forBarMetrics:UIBarMetricsDefault];
+        }
+
         [self addChildViewController:nav];
 
-        [nav.navigationBar setBarTintColor:self.navigationBackgroundColor];
-
         [_tabBar addItemWithIcon:[dict objectForKey:NORMAL_ICON] selectedIcon:[dict objectForKey:SELECTED_ICON]  title:[dict objectForKey:TITLE]];
-        
+
     }
 }
 
-
+- (void)setNavigationBackgroundImage:(UIImage *)navigationBackgroundImage{
+    _navigationBackgroundImage = navigationBackgroundImage;
+}
 
 -(void)setNavigationBackgroundColor:(UIColor *)navigationBackgroundColor{
     _navigationBackgroundColor = navigationBackgroundColor;
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
