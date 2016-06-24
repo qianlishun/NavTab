@@ -14,7 +14,8 @@
 
 * 2> 
   * 在主控制器 MainController 中
-    
+    MainController 继承于QLSTabBarController
+
     // 设置Nav背景色
     self.navigationBackgroundColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
     
