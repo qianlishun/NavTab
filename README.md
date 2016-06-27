@@ -6,7 +6,7 @@
   
 ###效果图:
 
-<img src="http://images2015.cnblogs.com/blog/905396/201605/905396-20160513175048093-287234252.png" alt="" width="231" height="426" /><img src="http://images2015.cnblogs.com/blog/905396/201605/905396-20160513175126421-1618180204.png" alt="" width="231" height="426" />
+<img src="http://images2015.cnblogs.com/blog/905396/201605/905396-20160513175048093-287234252.png" alt="" width="231" height="426" />   <img src="http://images2015.cnblogs.com/blog/905396/201605/905396-20160513175126421-1618180204.png" alt="" width="231" height="426" />
 
 ####简介
 * 1> 
