@@ -22,7 +22,7 @@
     if (title) {
         [item setTitle:title forState:UIControlStateNormal];
         [item setTitleColor:[UIColor lightGrayColor]forState:UIControlStateNormal];
-        [item setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+        [item setTitleColor:[UIColor blackColor] forState:UIControlStateDisabled];
     }
     // 图标
     if (icon) {
@@ -40,7 +40,7 @@
 
         iconImg = [self image:iconImg byScalingToSize:size];
 
-        [item setImage:iconImg forState:UIControlStateSelected];
+        [item setImage:iconImg forState:UIControlStateDisabled];
     }
     // 监听点击
     [item addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchDown];
