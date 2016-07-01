@@ -8,6 +8,7 @@
 
 #import "QLSTabBar.h"
 
+#define screenScale   ([UIScreen mainScreen].scale)
 @interface QLSTabBar ()
 
 @end
@@ -19,15 +20,28 @@
     QLSTabItem *item = [[QLSTabItem alloc]init];
 
     // 文字
-    [item setTitle:title forState:UIControlStateNormal];
-    item.titleLabel.textColor = [UIColor lightGrayColor];
-
+    if (title) {
+        [item setTitle:title forState:UIControlStateNormal];
+        [item setTitleColor:[UIColor lightGrayColor]forState:UIControlStateNormal];
+        [item setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+    }
     // 图标
     if (icon) {
-    [item setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+        UIImage *iconImg = [UIImage imageNamed:icon];
+        CGSize size = CGSizeMake(25, 25);
+
+        iconImg = [self image:iconImg byScalingToSize:size];
+
+        [item setImage:iconImg forState:UIControlStateNormal];
     }
     if (icon_selected) {
-    [item setImage:[UIImage imageNamed:icon_selected] forState:UIControlStateSelected];
+
+        UIImage *iconImg = [UIImage imageNamed:icon_selected];
+        CGSize size = CGSizeMake(28, 28);
+
+        iconImg = [self image:iconImg byScalingToSize:size];
+
+        [item setImage:iconImg forState:UIControlStateSelected];
     }
     // 监听点击
     [item addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchDown];
@@ -70,6 +84,26 @@
     _selectedItem = item;
 
 }
+
+- (UIImage *)image:(UIImage*)image byScalingToSize:(CGSize)targetSize {
+    UIImage *sourceImage = image;
+    UIImage *newImage = nil;
+
+    UIGraphicsBeginImageContext(targetSize);
+
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = CGPointZero;
+    thumbnailRect.size.width  = targetSize.width;
+    thumbnailRect.size.height = targetSize.height;
+
+    [sourceImage drawInRect:thumbnailRect];
+
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return newImage ;
+}
+
 // Block 方法
 //-(void)addButtonWithClickBlock:(void (^)(QLSTabBar *, NSInteger))code andImage:(UIImage *)image andSelectedImage:(UIImage *)imageSelected{
 //
