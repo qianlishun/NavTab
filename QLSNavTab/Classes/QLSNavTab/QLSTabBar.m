@@ -8,7 +8,6 @@
 
 #import "QLSTabBar.h"
 
-#define screenScale   ([UIScreen mainScreen].scale)
 @interface QLSTabBar ()
 
 @end
