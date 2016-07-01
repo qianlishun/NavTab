@@ -2,8 +2,8 @@
 //  QLSTabBarItem.m
 //  QLSNavTab
 //
-//  Created by Mr.Q on 16/5/12.
-//  Copyright © 2016年 QLS. All rights reserved.
+//  Created by Mr.Q on 15/9/17.
+//  Copyright © 2015年 QLS. All rights reserved.
 //
 
 #import "QLSTabItem.h"
