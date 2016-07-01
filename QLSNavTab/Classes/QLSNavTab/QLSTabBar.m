@@ -74,10 +74,10 @@
         [_delegate tabbar:self to:item.tag];
     }
     // 取消选中 之前选中的item
-    _selectedItem.selected = NO;
+    _selectedItem.enabled = YES;
 
     // 选中点击的item
-    item.selected = YES;
+    item.enabled = NO;
 
     // 保存当前item状态
     _selectedItem = item;
