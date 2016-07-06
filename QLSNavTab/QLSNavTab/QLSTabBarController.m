@@ -95,9 +95,7 @@
 
         if (self.navigationBackgroundColor) {
             [nav.navigationBar setBarTintColor:self.navigationBackgroundColor];
-        }
-
-        if (self.navigationBackgroundImage) {
+        }else if (self.navigationBackgroundImage) {
             [nav.navigationBar setBackgroundImage:self.navigationBackgroundImage forBarMetrics:UIBarMetricsDefault];
         }
 
