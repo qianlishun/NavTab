@@ -25,7 +25,7 @@
 
 }
 
-// 子控制信息数组
+/** 子控制信息数组 */
 @property (nonatomic,strong) NSArray *childControllerAndIconArr;
 
 @property (nonatomic,strong) UIColor *navigationBackgroundColor;

@@ -10,18 +10,18 @@
 		3E30FBA11CE422C7009E9F9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBA01CE422C7009E9F9C /* main.m */; };
 		3E30FBE51CE4282C009E9F9C /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBD91CE4282C009E9F9C /* MainController.m */; settings = {ASSET_TAGS = (); }; };
 		3E30FBE61CE4282C009E9F9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBDE1CE4282C009E9F9C /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		3E30FBE91CE429E8009E9F9C /* QLSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBE81CE429E8009E9F9C /* QLSNavigationController.m */; settings = {ASSET_TAGS = (); }; };
-		3E30FBEC1CE42A30009E9F9C /* QLSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBEB1CE42A30009E9F9C /* QLSTabBarController.m */; settings = {ASSET_TAGS = (); }; };
-		3E30FBF21CE42A71009E9F9C /* QLSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBF11CE42A71009E9F9C /* QLSTabBar.m */; settings = {ASSET_TAGS = (); }; };
-		3E30FBF51CE42A8F009E9F9C /* QLSTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBF41CE42A8F009E9F9C /* QLSTabItem.m */; settings = {ASSET_TAGS = (); }; };
-		3E30FBF81CE42ACE009E9F9C /* UIBarButtonItem+QLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E30FBF71CE42ACE009E9F9C /* UIBarButtonItem+QLS.m */; settings = {ASSET_TAGS = (); }; };
 		3E86599B1CE5A31200437D0C /* Three.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E86599A1CE5A31200437D0C /* Three.storyboard */; settings = {ASSET_TAGS = (); }; };
 		3E86C6541CE4B67700AC4BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E86C6531CE4B67700AC4BBD /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		3E86C6571CE4BA6100AC4BBD /* OneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E86C6561CE4BA6100AC4BBD /* OneController.m */; settings = {ASSET_TAGS = (); }; };
 		3E86C65D1CE4BAC700AC4BBD /* TwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E86C65C1CE4BAC700AC4BBD /* TwoController.m */; settings = {ASSET_TAGS = (); }; };
 		3E86C6631CE4BAEA00AC4BBD /* ThreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E86C6621CE4BAEA00AC4BBD /* ThreeController.m */; settings = {ASSET_TAGS = (); }; };
 		3E86C6661CE4BAF900AC4BBD /* FourController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E86C6651CE4BAF900AC4BBD /* FourController.m */; settings = {ASSET_TAGS = (); }; };
-		3EF7F9BA1CE4CD44000C1946 /* UINavigationItem+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7F9B91CE4CD43000C1946 /* UINavigationItem+Custom.m */; settings = {ASSET_TAGS = (); }; };
+		3EDEFE411D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE361D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m */; settings = {ASSET_TAGS = (); }; };
+		3EDEFE421D2C9EF000D6FD4F /* UINavigationItem+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE381D2C9EF000D6FD4F /* UINavigationItem+Custom.m */; settings = {ASSET_TAGS = (); }; };
+		3EDEFE431D2C9EF000D6FD4F /* QLSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3A1D2C9EF000D6FD4F /* QLSNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3C1D2C9EF000D6FD4F /* QLSTabBar.m */; settings = {ASSET_TAGS = (); }; };
+		3EDEFE451D2C9EF000D6FD4F /* QLSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		3EDEFE461D2C9EF000D6FD4F /* QLSTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +51,6 @@
 		3E30FBD91CE4282C009E9F9C /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		3E30FBDD1CE4282C009E9F9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E30FBDE1CE4282C009E9F9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3E30FBE71CE429E8009E9F9C /* QLSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSNavigationController.h; sourceTree = "<group>"; };
-		3E30FBE81CE429E8009E9F9C /* QLSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSNavigationController.m; sourceTree = "<group>"; };
-		3E30FBEA1CE42A30009E9F9C /* QLSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabBarController.h; sourceTree = "<group>"; };
-		3E30FBEB1CE42A30009E9F9C /* QLSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabBarController.m; sourceTree = "<group>"; };
-		3E30FBF01CE42A71009E9F9C /* QLSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabBar.h; sourceTree = "<group>"; };
-		3E30FBF11CE42A71009E9F9C /* QLSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabBar.m; sourceTree = "<group>"; };
-		3E30FBF31CE42A8F009E9F9C /* QLSTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabItem.h; sourceTree = "<group>"; };
-		3E30FBF41CE42A8F009E9F9C /* QLSTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabItem.m; sourceTree = "<group>"; };
-		3E30FBF61CE42ACE009E9F9C /* UIBarButtonItem+QLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+QLS.h"; sourceTree = "<group>"; };
-		3E30FBF71CE42ACE009E9F9C /* UIBarButtonItem+QLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+QLS.m"; sourceTree = "<group>"; };
 		3E86599A1CE5A31200437D0C /* Three.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Three.storyboard; sourceTree = "<group>"; };
 		3E86C6521CE4AE9F00AC4BBD /* toolsDemo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toolsDemo.pch; sourceTree = "<group>"; };
 		3E86C6531CE4B67700AC4BBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,8 +62,18 @@
 		3E86C6621CE4BAEA00AC4BBD /* ThreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeController.m; sourceTree = "<group>"; };
 		3E86C6641CE4BAF900AC4BBD /* FourController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourController.h; sourceTree = "<group>"; };
 		3E86C6651CE4BAF900AC4BBD /* FourController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourController.m; sourceTree = "<group>"; };
-		3EF7F9B81CE4CD43000C1946 /* UINavigationItem+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Custom.h"; sourceTree = "<group>"; };
-		3EF7F9B91CE4CD43000C1946 /* UINavigationItem+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Custom.m"; sourceTree = "<group>"; };
+		3EDEFE351D2C9EF000D6FD4F /* UIBarButtonItem+QLS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+QLS.h"; sourceTree = "<group>"; };
+		3EDEFE361D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+QLS.m"; sourceTree = "<group>"; };
+		3EDEFE371D2C9EF000D6FD4F /* UINavigationItem+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Custom.h"; sourceTree = "<group>"; };
+		3EDEFE381D2C9EF000D6FD4F /* UINavigationItem+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Custom.m"; sourceTree = "<group>"; };
+		3EDEFE391D2C9EF000D6FD4F /* QLSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSNavigationController.h; sourceTree = "<group>"; };
+		3EDEFE3A1D2C9EF000D6FD4F /* QLSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSNavigationController.m; sourceTree = "<group>"; };
+		3EDEFE3B1D2C9EF000D6FD4F /* QLSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabBar.h; sourceTree = "<group>"; };
+		3EDEFE3C1D2C9EF000D6FD4F /* QLSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabBar.m; sourceTree = "<group>"; };
+		3EDEFE3D1D2C9EF000D6FD4F /* QLSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabBarController.h; sourceTree = "<group>"; };
+		3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabBarController.m; sourceTree = "<group>"; };
+		3EDEFE3F1D2C9EF000D6FD4F /* QLSTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabItem.h; sourceTree = "<group>"; };
+		3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,7 @@
 		3E30FB9E1CE422C7009E9F9C /* QLSNavTab */ = {
 			isa = PBXGroup;
 			children = (
+				3EDEFE331D2C9EF000D6FD4F /* QLSNavTab */,
 				3E30FBD31CE4282C009E9F9C /* Classes */,
 				3E30FBB01CE422C7009E9F9C /* Info.plist */,
 				3E30FB9F1CE422C7009E9F9C /* Supporting Files */,
@@ -142,7 +143,6 @@
 		3E30FBD31CE4282C009E9F9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3E30FBDF1CE4282C009E9F9C /* QLSNavTab */,
 				3E30FBD61CE4282C009E9F9C /* Main */,
 				3E30FBDC1CE4282C009E9F9C /* Others */,
 				3E30FBDA1CE4282C009E9F9C /* One */,
@@ -213,33 +213,6 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
-		3E30FBDF1CE4282C009E9F9C /* QLSNavTab */ = {
-			isa = PBXGroup;
-			children = (
-				3E30FBE01CE4282C009E9F9C /* Category */,
-				3E30FBE71CE429E8009E9F9C /* QLSNavigationController.h */,
-				3E30FBE81CE429E8009E9F9C /* QLSNavigationController.m */,
-				3E30FBEA1CE42A30009E9F9C /* QLSTabBarController.h */,
-				3E30FBEB1CE42A30009E9F9C /* QLSTabBarController.m */,
-				3E30FBF01CE42A71009E9F9C /* QLSTabBar.h */,
-				3E30FBF11CE42A71009E9F9C /* QLSTabBar.m */,
-				3E30FBF31CE42A8F009E9F9C /* QLSTabItem.h */,
-				3E30FBF41CE42A8F009E9F9C /* QLSTabItem.m */,
-			);
-			path = QLSNavTab;
-			sourceTree = "<group>";
-		};
-		3E30FBE01CE4282C009E9F9C /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				3E30FBF61CE42ACE009E9F9C /* UIBarButtonItem+QLS.h */,
-				3E30FBF71CE42ACE009E9F9C /* UIBarButtonItem+QLS.m */,
-				3EF7F9B81CE4CD43000C1946 /* UINavigationItem+Custom.h */,
-				3EF7F9B91CE4CD43000C1946 /* UINavigationItem+Custom.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		3E30FBE11CE4282C009E9F9C /* Three */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +246,33 @@
 				3E86C65C1CE4BAC700AC4BBD /* TwoController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3EDEFE331D2C9EF000D6FD4F /* QLSNavTab */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEFE341D2C9EF000D6FD4F /* Category */,
+				3EDEFE391D2C9EF000D6FD4F /* QLSNavigationController.h */,
+				3EDEFE3A1D2C9EF000D6FD4F /* QLSNavigationController.m */,
+				3EDEFE3B1D2C9EF000D6FD4F /* QLSTabBar.h */,
+				3EDEFE3C1D2C9EF000D6FD4F /* QLSTabBar.m */,
+				3EDEFE3D1D2C9EF000D6FD4F /* QLSTabBarController.h */,
+				3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */,
+				3EDEFE3F1D2C9EF000D6FD4F /* QLSTabItem.h */,
+				3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */,
+			);
+			path = QLSNavTab;
+			sourceTree = "<group>";
+		};
+		3EDEFE341D2C9EF000D6FD4F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEFE351D2C9EF000D6FD4F /* UIBarButtonItem+QLS.h */,
+				3EDEFE361D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m */,
+				3EDEFE371D2C9EF000D6FD4F /* UINavigationItem+Custom.h */,
+				3EDEFE381D2C9EF000D6FD4F /* UINavigationItem+Custom.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,18 +404,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E30FBF21CE42A71009E9F9C /* QLSTabBar.m in Sources */,
-				3E30FBF81CE42ACE009E9F9C /* UIBarButtonItem+QLS.m in Sources */,
+				3EDEFE421D2C9EF000D6FD4F /* UINavigationItem+Custom.m in Sources */,
+				3EDEFE461D2C9EF000D6FD4F /* QLSTabItem.m in Sources */,
 				3E86C6631CE4BAEA00AC4BBD /* ThreeController.m in Sources */,
-				3EF7F9BA1CE4CD44000C1946 /* UINavigationItem+Custom.m in Sources */,
-				3E30FBE91CE429E8009E9F9C /* QLSNavigationController.m in Sources */,
+				3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */,
+				3EDEFE411D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m in Sources */,
+				3EDEFE451D2C9EF000D6FD4F /* QLSTabBarController.m in Sources */,
 				3E86C65D1CE4BAC700AC4BBD /* TwoController.m in Sources */,
+				3EDEFE431D2C9EF000D6FD4F /* QLSNavigationController.m in Sources */,
 				3E30FBE51CE4282C009E9F9C /* MainController.m in Sources */,
 				3E86C6661CE4BAF900AC4BBD /* FourController.m in Sources */,
 				3E30FBA11CE422C7009E9F9C /* main.m in Sources */,
 				3E86C6571CE4BA6100AC4BBD /* OneController.m in Sources */,
-				3E30FBEC1CE42A30009E9F9C /* QLSTabBarController.m in Sources */,
-				3E30FBF51CE42A8F009E9F9C /* QLSTabItem.m in Sources */,
 				3E30FBE61CE4282C009E9F9C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,7 +69,7 @@
 
 -(void)itemClick:(QLSTabItem *)item{
 
-    // 0:通知代理
+    // 通知代理
     if([_delegate respondsToSelector:@selector(tabbar:to:)] ){
         [_delegate tabbar:self to:item.tag];
     }
