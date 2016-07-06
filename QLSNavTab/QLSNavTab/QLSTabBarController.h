@@ -28,8 +28,10 @@
 /** 子控制信息数组 */
 @property (nonatomic,strong) NSArray *childControllerAndIconArr;
 
+/** 设置 nav 背景色 */
 @property (nonatomic,strong) UIColor *navigationBackgroundColor;
 
+/** 设置 nav 背景图片 */
 @property (nonatomic,strong) UIImage *navigationBackgroundImage;
 
 @end
