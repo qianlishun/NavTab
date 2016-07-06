@@ -18,7 +18,10 @@
     (MainController 继承于QLSTabBarController)
 
     // 设置Nav背景色
-    self.navigationBackgroundColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+    self.navigationBackgroundColor = ...
+    
+    // 设置 Nav 背景图片 (如果已设置了背景色,则背景图不生效)
+    self.navigationBackgroundImage = ....
     
     // 设置子控制器数组
     self.childControllerAndIconArr = @[
