@@ -24,6 +24,14 @@
 
     [button setTitle:@"第三个控制器" forState:UIControlStateNormal];
     [self.view addSubview:button];
+ 
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(backUp)];
+}
+
+- (void)backUp{
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
+
 @end
