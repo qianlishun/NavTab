@@ -25,13 +25,14 @@
     //调用系统默认的做法:添加UITabBarButton
     [super viewWillAppear:animated];
 
-    // 删除self.tabBar中的子控件 除了自定义tabBar
+    // 删除self.tabBar中的子控件 除了自定义tabBar (也要排除imageView)
     for (UIView *childView in self.tabBar.subviews) {
-        if (![childView isKindOfClass:[QLSTabBar class]]) {
+        if (!([childView isKindOfClass:[QLSTabBar class]] ||
+              [childView isKindOfClass:[UIImageView class]])) {
+
             [childView removeFromSuperview];
         }
     }
-
 }
 
 #pragma mark 初始化TabBar
