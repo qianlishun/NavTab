@@ -15,13 +15,12 @@
 2>  在主控制器 MainController 中
 * (MainController 继承于QLSTabBarController)
 
-设置Nav背景色
+①设置Nav背景色,设置 Nav 背景图片
+
   * self.navigationBackgroundColor = ...
-    
-设置 Nav 背景图片 (如果已设置了背景色,则背景图不生效)
-  * self.navigationBackgroundImage = ....
-    
-* 设置子控制器数组
+  * self.navigationBackgroundImage = ....(如果已设置了背景色,则背景图不生效)
+
+②设置子控制器数组
 
     self.childControllerAndIconArr = @[
 
