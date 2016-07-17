@@ -75,9 +75,7 @@
     //遍历配置字典
     for (NSInteger i = 0; i < childControllerAndIconArr.count; i++) {
 
-        //取出字典
         NSDictionary *dict=childControllerAndIconArr[i];
-
 
         // 创建导航控制器
         QLSNavigationController *nav;
