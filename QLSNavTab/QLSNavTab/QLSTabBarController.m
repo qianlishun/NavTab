@@ -67,7 +67,6 @@
 }
 
 
-
 -(void)setChildControllerAndIconArr:(NSArray *)childControllerAndIconArr{
 
     _childControllerAndIconArr=childControllerAndIconArr;
@@ -116,7 +115,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 @end
