@@ -18,7 +18,7 @@
 ①设置Nav背景色,设置 Nav 背景图片
 
   * self.navigationBackgroundColor = ...
-  * self.navigationBackgroundImage = ....(如果已设置了背景色,则背景图不生效)
+  * self.navigationBackgroundImage = ...(如果已设置了背景色,则背景图不生效)
 
 ②设置子控制器数组
 
