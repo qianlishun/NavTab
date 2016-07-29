@@ -66,7 +66,6 @@
 }
 
 
-
 -(void)itemClick:(QLSTabItem *)item{
 
     // 通知代理
@@ -100,7 +99,7 @@
     newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    return newImage ;
+    return newImage;
 }
 
 // Block 方法
