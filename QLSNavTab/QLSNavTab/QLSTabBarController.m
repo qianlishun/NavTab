@@ -26,18 +26,14 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    // 删除self.tabBar中的子控件 除了自定义tabBar
-    for (UIView *childView in self.tabBar.subviews) {
-        if (![childView isKindOfClass:[QLSTabBar class]]) {
-            [childView removeFromSuperview];
-        }
-    }
+    [super viewDidAppear: animated];
 }
 
 #pragma mark 初始化TabBar
 -(void)initTabBar{
 
     QLSTabBar *tabBar = [[QLSTabBar alloc]initWithFrame:self.tabBar.bounds];
+    tabBar.tag = -1001;
     tabBar.delegate = self;
 
     [self.tabBar addSubview:tabBar];
@@ -125,7 +121,15 @@
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    
-    [theTabBar setFrame:self.tabBar.bounds];
+    // 删除self.tabBar中的子控件 除了自定义tabBar
+    for (UIView *childView in self.tabBar.subviews) {
+        if (![childView isKindOfClass:[QLSTabBar class]]) {
+            [childView removeFromSuperview];
+        }
+    }
+    if(theTabBar.tag == -1001){
+        [theTabBar setFrame:self.tabBar.bounds];
+        theTabBar.tag = 1001;
+    }
 }
 @end
