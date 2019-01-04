@@ -13,6 +13,15 @@
 @end
 
 @implementation QLSTabBar
+    
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+    
+    }
+    return self;
+}
 
 -(void)addItemWithIcon:(NSString *)icon selectedIcon:(NSString *)icon_selected title:(NSString *)title{
 
@@ -43,8 +52,8 @@
         [item setImage:iconImg forState:UIControlStateDisabled];
     }
     // 监听点击
-    [item addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchDown];
-
+    [item addTarget:self action:@selector(onItemClick:) forControlEvents:UIControlEventTouchUpInside];
+    
     // 添加item
     [self addSubview:item];
 
@@ -52,7 +61,7 @@
 
     // 默认选中第一个item
     if(count == 1){
-        [self itemClick:item];
+        [self onItemClick:item];
     }
     // 调整 所有item的frame
     CGFloat height = self.frame.size.height;
@@ -66,8 +75,8 @@
 }
 
 
--(void)itemClick:(QLSTabItem *)item{
-
+- (void)onItemClick:(QLSTabItem *)item{
+    NSLog(@"on click");
     // 通知代理
     if([_delegate respondsToSelector:@selector(tabbar:to:)] ){
         [_delegate tabbar:self to:item.tag];
