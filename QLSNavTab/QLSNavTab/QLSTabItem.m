@@ -14,16 +14,16 @@
 #define kTitleRatio 0.3
 
 @implementation QLSTabItem
-
--(instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-
+        
         self.titleLabel.font = [UIFont systemFontOfSize:14];
         [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-
+        
         self.imageView.contentMode = UIViewContentModeCenter;
-
     }
     return self;
 }
@@ -57,4 +57,9 @@
     return CGRectMake(titleX, titleY, titleWidth, titleHeight);
 }
 
+-(void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents{
+    
+    [super addTarget:target action:action forControlEvents:controlEvents];
+    
+}
 @end
