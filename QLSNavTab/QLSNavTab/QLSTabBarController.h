@@ -21,7 +21,7 @@
 
 @interface QLSTabBarController : UITabBarController{
     @public
-    QLSTabBar *_tabBar;
+    QLSTabBar *theTabBar;
 
 }
 
