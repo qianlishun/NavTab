@@ -8,16 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "QLSTabBar.h"
+ 
+static NSString *TAB_VC_VIEWCONTROLLER = @"VC";
 
-#define VC_VIEWCONTROLLER @"VC"
+static NSString * TAB_VC_STORYBOARD = @"SB";
 
-#define VC_STORYBOARD @"SB"
+static NSString * TAB_NORMAL_ICON = @"ICONOR";
 
-#define NORMAL_ICON @"ICONOR"
+static NSString *  TAB_SELECTED_ICON = @"ICONSE";
 
-#define  SELECTED_ICON @"ICONSE"
+static NSString * TAB_TITLE = @"TITLE";
 
-#define TITLE @"TITLE"
+static NSString * TAB_TITLE_COLOR = @"TITLE_COLOR";
+
+static NSString * TAB_TITLE_COLOR_SEL = @"TITLE_COLOR_SEL";
 
 @interface QLSTabBarController : UITabBarController{
     @public

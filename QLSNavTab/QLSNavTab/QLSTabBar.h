@@ -12,8 +12,6 @@
 
 @class QLSTabBar;
 
-#define kTabBarHeight 49
-
 @protocol QLSTabBarDelegate <NSObject>
 
 @optional
@@ -34,8 +32,10 @@
 
 
 // 添加tab按钮的方法
--(void)addItemWithIcon:(NSString *)icon selectedIcon:(NSString *)icon_selected title:(NSString *)title;
+-(void)addItemWithIcon:(NSString *)icon selectedIcon:(NSString *)icon_selected title:(NSString *)title titleColor:(UIColor*)titleColor selectedTitleColor:(UIColor*)selectedTitleColor;
 
+- (QLSTabItem*)tabItemWithIndex:(NSUInteger)index;
 
+- (void)setSelectedIndex:(NSUInteger)index;
 @end
 

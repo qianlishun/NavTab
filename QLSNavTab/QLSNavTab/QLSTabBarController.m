@@ -79,7 +79,11 @@
     
     if (to < 0 || to >= self.childViewControllers.count||self.selectedIndex==to) return;
     
-    UIViewController *newVc = self.childViewControllers[to];
+    self.selectedIndex = to;
+}
+
+- (void)setSelectedIndex:(NSUInteger)selectedIndex{
+    UIViewController *newVc = self.childViewControllers[selectedIndex];
     
     CGFloat width = self.view.frame.size.width;
     
@@ -87,12 +91,13 @@
     
     newVc.view.frame = CGRectMake(0,0, width, height);
     
-    self.selectedIndex=to;
-    
+    [theTabBar setSelectedIndex:selectedIndex];
     [self.tabBar bringSubviewToFront:theTabBar];
     
+    [super setSelectedIndex:selectedIndex];
+    
+    
 }
-
 
 
 -(void)setChildControllerAndIconArr:(NSArray *)childControllerAndIconArr{
@@ -109,14 +114,14 @@
         // 创建导航控制器
         QLSNavigationController *nav;
         
-        if ([dict objectForKey:VC_VIEWCONTROLLER]) {
-            nav=[[QLSNavigationController alloc]initWithRootViewController:[dict objectForKey:VC_VIEWCONTROLLER]];
+        if ([dict objectForKey:TAB_VC_VIEWCONTROLLER]) {
+            nav=[[QLSNavigationController alloc]initWithRootViewController:[dict objectForKey:TAB_VC_VIEWCONTROLLER]];
         }
-        if ([dict objectForKey:VC_STORYBOARD]) {
+        if ([dict objectForKey:TAB_VC_STORYBOARD]) {
             
-            UIStoryboard *sb = [UIStoryboard storyboardWithName:[dict objectForKey:VC_STORYBOARD] bundle:[NSBundle mainBundle]];
+            UIStoryboard *sb = [UIStoryboard storyboardWithName:[dict objectForKey:TAB_VC_STORYBOARD] bundle:[NSBundle mainBundle]];
             
-            UIViewController *vc = [sb instantiateViewControllerWithIdentifier:[dict objectForKey:VC_STORYBOARD]];
+            UIViewController *vc = [sb instantiateViewControllerWithIdentifier:[dict objectForKey:TAB_VC_STORYBOARD]];
             
             nav = [[QLSNavigationController alloc]initWithRootViewController:vc];
             
@@ -142,12 +147,11 @@
         
         [self addChildViewController:nav];
         
-        [theTabBar addItemWithIcon:[dict objectForKey:NORMAL_ICON] selectedIcon:[dict objectForKey:SELECTED_ICON]  title:[dict objectForKey:TITLE]];
+        
+        [theTabBar addItemWithIcon:[dict objectForKey:TAB_NORMAL_ICON] selectedIcon:[dict objectForKey:TAB_SELECTED_ICON]  title:[dict objectForKey:TAB_TITLE] titleColor:[dict objectForKey:TAB_TITLE_COLOR] selectedTitleColor:[dict objectForKey:TAB_TITLE_COLOR_SEL]];
         
     }
 }
-
-
 
 -(void)setNavigationBackgroundColor:(UIColor *)navigationBackgroundColor{
     _navigationBackgroundColor = navigationBackgroundColor;

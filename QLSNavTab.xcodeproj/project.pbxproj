@@ -20,8 +20,8 @@
 		3EDEFE421D2C9EF000D6FD4F /* UINavigationItem+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE381D2C9EF000D6FD4F /* UINavigationItem+Custom.m */; };
 		3EDEFE431D2C9EF000D6FD4F /* QLSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3A1D2C9EF000D6FD4F /* QLSNavigationController.m */; };
 		3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3C1D2C9EF000D6FD4F /* QLSTabBar.m */; };
-		3EDEFE451D2C9EF000D6FD4F /* QLSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */; };
 		3EDEFE461D2C9EF000D6FD4F /* QLSTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */; };
+		6E9798292893DB0800C0B7CC /* QLSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -411,12 +411,12 @@
 				3E86C6631CE4BAEA00AC4BBD /* ThreeController.m in Sources */,
 				3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */,
 				3EDEFE411D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m in Sources */,
-				3EDEFE451D2C9EF000D6FD4F /* QLSTabBarController.m in Sources */,
 				3E86C65D1CE4BAC700AC4BBD /* TwoController.m in Sources */,
 				3EDEFE431D2C9EF000D6FD4F /* QLSNavigationController.m in Sources */,
 				3E30FBE51CE4282C009E9F9C /* MainController.m in Sources */,
 				3E86C6661CE4BAF900AC4BBD /* FourController.m in Sources */,
 				3E30FBA11CE422C7009E9F9C /* main.m in Sources */,
+				6E9798292893DB0800C0B7CC /* QLSTabBarController.m in Sources */,
 				3E86C6571CE4BA6100AC4BBD /* OneController.m in Sources */,
 				3E30FBE61CE4282C009E9F9C /* AppDelegate.m in Sources */,
 			);
