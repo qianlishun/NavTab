@@ -23,20 +23,32 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+    
+    }
+    return self;
+}
+- (void)test:(id)sender{
+    NSLog(@"test");
+}
 -(void)addItemWithIcon:(NSString *)icon selectedIcon:(NSString *)icon_selected title:(NSString *)title{
 
     QLSTabItem *item = [[QLSTabItem alloc]init];
 
-    // 文字
+   // 文字
     if (title) {
         [item setTitle:title forState:UIControlStateNormal];
         [item setTitleColor:[UIColor lightGrayColor]forState:UIControlStateNormal];
         [item setTitleColor:[UIColor blackColor] forState:UIControlStateDisabled];
     }
+    CGFloat imgWidth = (1 - kTitleRatio)*44;
     // 图标
     if (icon) {
         UIImage *iconImg = [UIImage imageNamed:icon];
-        CGSize size = CGSizeMake(25, 25);
+        CGSize size = CGSizeMake(imgWidth, imgWidth);
 
         iconImg = [self image:iconImg byScalingToSize:size];
 
@@ -45,7 +57,7 @@
     if (icon_selected) {
 
         UIImage *iconImg = [UIImage imageNamed:icon_selected];
-        CGSize size = CGSizeMake(28, 28);
+        CGSize size = CGSizeMake(imgWidth, imgWidth);
 
         iconImg = [self image:iconImg byScalingToSize:size];
 
@@ -72,6 +84,7 @@
         tabItem.tag = i;
         tabItem.frame = CGRectMake(width * i, 0, width, height);
     }
+    
 }
 
 
@@ -96,7 +109,7 @@
     UIImage *sourceImage = image;
     UIImage *newImage = nil;
 
-    UIGraphicsBeginImageContext(targetSize);
+    UIGraphicsBeginImageContextWithOptions(targetSize, NO, [UIScreen mainScreen].scale);
 
     CGRect thumbnailRect = CGRectZero;
     thumbnailRect.origin = CGPointZero;
@@ -108,7 +121,7 @@
     newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    return newImage;
+    return newImage ;
 }
 
 // Block 方法

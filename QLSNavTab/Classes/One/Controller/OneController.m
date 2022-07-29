@@ -22,10 +22,10 @@
     self.title = @"My";
 
     UIButton *btn = [self buttonWithAction:@selector(jumpToFour) andTitle:@"push跳转"];
-    btn.center = CGPointMake(self.view.center.x, 100);
+    btn.center = CGPointMake(kWIDTH/2, 100);
 
     UIButton *btn2 = [self buttonWithAction:@selector(presentToFour) andTitle:@"模态弹出"];
-    btn2.center = CGPointMake(self.view.center.x, 200);
+    btn2.center = CGPointMake(kWIDTH/2, 200);
 
 }
 

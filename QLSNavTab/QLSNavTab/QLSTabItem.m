@@ -10,9 +10,6 @@
 
 #define kDockItemSelectedBg @"tabbar_slider.png"
 
-// 文字高度比例
-#define kTitleRatio 0.3
-
 @implementation QLSTabItem
 - (instancetype)init
 {
@@ -20,7 +17,7 @@
     if (self) {
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         
-        self.titleLabel.font = [UIFont systemFontOfSize:14];
+        [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
         [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         
         self.imageView.contentMode = UIViewContentModeCenter;
@@ -52,7 +49,7 @@
 
     CGFloat titleX = 0;
     CGFloat titleHeight = contentRect.size.height * kTitleRatio;
-    CGFloat titleY = contentRect.size.height - titleHeight - 3;
+    CGFloat titleY = contentRect.size.height - titleHeight;
     CGFloat titleWidth = contentRect.size.width;
     return CGRectMake(titleX, titleY, titleWidth, titleHeight);
 }

@@ -342,6 +342,7 @@
 				TargetAttributes = {
 					3E30FB9B1CE422C7009E9F9C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7C448R8D4P;
 					};
 					3E30FBB41CE422C7009E9F9C = {
 						CreatedOnToolsVersion = 7.0;
@@ -358,6 +359,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

@@ -18,7 +18,6 @@
     [super viewDidLoad];
     UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
     button.frame=CGRectMake(0, 0, 200, 60);
-    button.center=self.view.center;
 
     button.backgroundColor=[UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
 
