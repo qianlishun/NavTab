@@ -126,21 +126,14 @@
             nav = [[QLSNavigationController alloc]initWithRootViewController:vc];
             
         }
+
         if (self.navigationBackgroundColor) {
-            
-            if (@available(iOS 13.0, *)) {
-                
-                UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
-                appearance.backgroundColor = self.navigationBackgroundColor;
-                
-                nav.navigationBar.standardAppearance = appearance;
-                nav.navigationBar.scrollEdgeAppearance = appearance;
-                
-            } else {
-                
-                [nav.navigationBar setBarTintColor:self.navigationBackgroundColor];
-            }
+            [nav setBackgroundColor:self.navigationBackgroundColor];
         }
+        if(self.navTitleColor){
+            [nav setTitleColor:self.navTitleColor];
+        }
+
         if (self.navigationBackgroundImage) {
             [nav.navigationBar setBackgroundImage:self.navigationBackgroundImage forBarMetrics:UIBarMetricsDefault];
         }
@@ -151,6 +144,8 @@
         [theTabBar addItemWithIcon:[dict objectForKey:TAB_NORMAL_ICON] selectedIcon:[dict objectForKey:TAB_SELECTED_ICON]  title:[dict objectForKey:TAB_TITLE] titleColor:[dict objectForKey:TAB_TITLE_COLOR] selectedTitleColor:[dict objectForKey:TAB_TITLE_COLOR_SEL]];
         
     }
+    
+    theTabBar.backgroundColor = self.tabbarBackgroundColor;
 }
 
 -(void)setNavigationBackgroundColor:(UIColor *)navigationBackgroundColor{

@@ -20,7 +20,7 @@
         [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
         [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         
-        self.imageView.contentMode = UIViewContentModeCenter;
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return self;
 }
@@ -40,7 +40,7 @@
     if (self.titleLabel.text.length) {
         imageH = contentRect.size.height * (1-kTitleRatio);
     }
-    return CGRectMake(imageX, imageY, imageW, imageH);
+    return CGRectMake(imageX, imageY+imageH*0.05, imageW, imageH*0.9);
 
 }
 

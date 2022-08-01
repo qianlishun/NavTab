@@ -19,9 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad]; 
 
-//    self.navigationBackgroundColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
-    self.navigationBackgroundImage = [UIImage imageNamed:@"NavBar64"];
+    self.navigationBackgroundColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+//    self.navigationBackgroundImage = [UIImage imageNamed:@"NavBar64"];
 
+    self.navTitleColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+
+    self.tabbarBackgroundColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+
+    
     self.childControllerAndIconArr = @[
 
                                        /************第一个控制器配置信息*********************/

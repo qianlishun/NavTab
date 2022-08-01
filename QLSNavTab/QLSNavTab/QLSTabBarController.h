@@ -38,4 +38,10 @@ static NSString * TAB_TITLE_COLOR_SEL = @"TITLE_COLOR_SEL";
 /** 设置 nav 背景图片 */
 @property (nonatomic,strong) UIImage *navigationBackgroundImage;
 
+/** 设置 nav 背景色 */
+@property(nonatomic, strong) UIColor *tabbarBackgroundColor;
+
+/** 设置 nav title 字体颜色 */
+@property(nonatomic, strong) UIColor *navTitleColor;
+
 @end

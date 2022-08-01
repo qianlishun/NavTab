@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface QLSNavigationController : UINavigationController
+- (void)setTitleColor:(UIColor*)color;
+- (void)setBackgroundColor:(UIColor*)color;
 
 @end

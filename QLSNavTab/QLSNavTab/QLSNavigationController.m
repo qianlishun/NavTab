@@ -9,18 +9,45 @@
 #import "QLSNavigationController.h"
 
 @interface QLSNavigationController ()<UINavigationControllerDelegate>
-
+@property(nonatomic, strong) UIColor *titleColor;
 @end
 
 @implementation QLSNavigationController
 
+- (void)setTitleColor:(UIColor *)color{
+    _titleColor = color;
+    NSDictionary *dict = @{NSForegroundColorAttributeName:_titleColor};
+    [self.navigationBar setTitleTextAttributes:dict];
+    self.navigationBar.tintColor = _titleColor;
+    
+    if(@available(iOS 13.0,*)){
+        UINavigationBarAppearance *appearance = self.navigationBar.standardAppearance;
+        appearance.titleTextAttributes = dict;
+        self.navigationBar.standardAppearance = appearance;
+        self.navigationBar.scrollEdgeAppearance = appearance;
+    }
+}
+
+- (void)setBackgroundColor:(UIColor *)color{
+    
+    if (@available(iOS 13.0, *)) {
+        
+        UINavigationBarAppearance *appearance = self.navigationBar.standardAppearance;
+        appearance.backgroundColor = color;
+        
+        self.navigationBar.standardAppearance = appearance;
+        self.navigationBar.scrollEdgeAppearance = appearance;
+        
+    } else {
+        
+        [self.navigationBar setBarTintColor:color];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.navigationBar setTintColor:[UIColor whiteColor]];
-
     self.navigationBar.shadowImage = [[UIImage alloc]init];
-
 }
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -32,8 +59,9 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.topViewController.navigationItem.backBarButtonItem = backItem;
 
-    [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
-    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    if(self.titleColor){
+        [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:_titleColor} forState:UIControlStateNormal];
+    }
 
     // 调用系统默认做法
     [super pushViewController:viewController animated:animated];
@@ -50,10 +78,9 @@
         viewControllerToPresent.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<" style:UIBarButtonItemStylePlain target:self action:@selector(onCustomDismiss:)];
     }
 
-
-    [nav.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
-    nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor]};
-
+    if(self.titleColor){
+        [nav.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:_titleColor} forState:UIControlStateNormal];
+    }
     // 调用系统默认做法
     [super presentViewController:nav animated:flag completion:completion];
     
