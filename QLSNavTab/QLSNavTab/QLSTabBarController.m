@@ -9,6 +9,8 @@
 #import "QLSTabBarController.h"
 #import "QLSNavigationController.h"
 
+static float originTabbarHeight = 50;
+
 @interface QLSTabBarController ()<QLSTabBarDelegate>
 
 @end
@@ -17,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self initTabBar];
     
     [self.tabBar addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionOld context:nil];
 }
@@ -55,16 +55,24 @@
             [childView removeFromSuperview];
         }
     }
-    if(theTabBar.tag == -1001){
-        [theTabBar setFrame:self.tabBar.bounds];
+    if(theTabBar && theTabBar.tag == -1001){
+        CGFloat bottomMargin = self.view.bounds.size.height - originTabbarHeight-self.tabBar.frame.origin.y;
+        CGRect frame = CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.size.height-self.tabbarHeight-bottomMargin, self.tabBar.frame.size.width, self.tabbarHeight);
+        [theTabBar setFrame:frame];
         theTabBar.tag = 1001;
     }
 }
 
 #pragma mark 初始化TabBar
 -(void)initTabBar{
-    
-    QLSTabBar *tabBar = [[QLSTabBar alloc]initWithFrame:self.tabBar.frame];
+    if(theTabBar){
+        [theTabBar removeFromSuperview];
+    }
+    if(!self.tabbarHeight || self.tabbarHeight<50){
+        self.tabbarHeight = 50;
+    }
+    CGRect frame = CGRectMake(0, 0, self.tabBar.frame.size.width, self.tabbarHeight);
+    QLSTabBar *tabBar = [[QLSTabBar alloc]initWithFrame:frame];
     tabBar.tag = -1001;
     tabBar.delegate = self;
     
@@ -101,6 +109,14 @@
 
 
 -(void)setChildControllerAndIconArr:(NSArray *)childControllerAndIconArr{
+    
+    if(_childControllerAndIconArr){
+        for (UIViewController *vc in _childControllerAndIconArr) {
+            [vc removeFromParentViewController];
+        }
+    }
+    
+    [self initTabBar];
     
     _childControllerAndIconArr=childControllerAndIconArr;
     
@@ -144,7 +160,7 @@
         [theTabBar addItemWithIcon:[dict objectForKey:TAB_NORMAL_ICON] selectedIcon:[dict objectForKey:TAB_SELECTED_ICON]  title:[dict objectForKey:TAB_TITLE] titleColor:[dict objectForKey:TAB_TITLE_COLOR] selectedTitleColor:[dict objectForKey:TAB_TITLE_COLOR_SEL]];
         
     }
-    
+    self.tabBar.backgroundColor = self.tabbarBackgroundColor;
     theTabBar.backgroundColor = self.tabbarBackgroundColor;
 }
 

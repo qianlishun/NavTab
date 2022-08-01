@@ -44,4 +44,7 @@ static NSString * TAB_TITLE_COLOR_SEL = @"TITLE_COLOR_SEL";
 /** 设置 nav title 字体颜色 */
 @property(nonatomic, strong) UIColor *navTitleColor;
 
+/** 自定义 tabbar 高度*/
+@property(nonatomic, assign) CGFloat tabbarHeight;
+
 @end
