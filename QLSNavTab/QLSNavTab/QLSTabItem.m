@@ -51,7 +51,7 @@
     CGFloat titleHeight = contentRect.size.height * kTitleRatio;
     CGFloat titleY = contentRect.size.height - titleHeight;
     CGFloat titleWidth = contentRect.size.width;
-    return CGRectMake(titleX, titleY, titleWidth, titleHeight);
+    return CGRectMake(titleX, titleY*0.97, titleWidth, titleHeight);
 }
 
 -(void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents{

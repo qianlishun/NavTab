@@ -32,7 +32,7 @@
 
 
 // 添加tab按钮的方法
--(void)addItemWithIcon:(NSString *)icon selectedIcon:(NSString *)icon_selected title:(NSString *)title titleColor:(UIColor*)titleColor selectedTitleColor:(UIColor*)selectedTitleColor;
+-(void)addItemWithIcon:(NSString *)icon selectedIcon:(NSString *)icon_selected title:(NSString *)title titleColor:(UIColor*)titleColor selectedTitleColor:(UIColor*)selectedTitleColor font:(UIFont*)font;
 
 - (QLSTabItem*)tabItemWithIndex:(NSUInteger)index;
 

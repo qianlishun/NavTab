@@ -25,12 +25,15 @@
 - (void)test:(id)sender{
     NSLog(@"test");
 }
--(void)addItemWithIcon:(id)icon selectedIcon:(id)icon_selected title:(NSString *)title titleColor:(UIColor *)titleColor selectedTitleColor:(UIColor *)selectedTitleColor{
+-(void)addItemWithIcon:(id)icon selectedIcon:(id)icon_selected title:(NSString *)title titleColor:(UIColor *)titleColor selectedTitleColor:(UIColor *)selectedTitleColor font:(UIFont *)font{
 
     QLSTabItem *item = [[QLSTabItem alloc]init];
 
    // 文字
     if (title) {
+        if(font){
+            [item.titleLabel setFont:font];
+        }
         [item setTitle:title forState:UIControlStateNormal];
         if(!titleColor)
             titleColor = [UIColor lightGrayColor];

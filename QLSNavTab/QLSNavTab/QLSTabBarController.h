@@ -47,4 +47,7 @@ static NSString * TAB_TITLE_COLOR_SEL = @"TITLE_COLOR_SEL";
 /** 自定义 tabbar 高度*/
 @property(nonatomic, assign) CGFloat tabbarHeight;
 
+/** 自定义 tabbar  字体*/
+@property(nonatomic, strong) UIFont *tabbarFont;
+
 @end
