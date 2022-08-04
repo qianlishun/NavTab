@@ -55,12 +55,6 @@ static float originTabbarHeight = 50;
             [childView removeFromSuperview];
         }
     }
-    if(theTabBar && theTabBar.tag == -1001){
-        CGFloat bottomMargin = self.view.bounds.size.height - originTabbarHeight-self.tabBar.frame.origin.y;
-        CGRect frame = CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.size.height-self.tabbarHeight-bottomMargin, self.tabBar.frame.size.width, self.tabbarHeight);
-        [theTabBar setFrame:frame];
-        theTabBar.tag = 1001;
-    }
 }
 
 #pragma mark 初始化TabBar
@@ -177,6 +171,9 @@ static float originTabbarHeight = 50;
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+    CGFloat bottomMargin = self.view.bounds.size.height - originTabbarHeight-self.tabBar.frame.origin.y;
+    CGRect frame = CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.size.height-self.tabbarHeight-bottomMargin, self.tabBar.frame.size.width, self.tabbarHeight);
+    [theTabBar setFrame:frame];
 }
 
 -(void)dealloc{

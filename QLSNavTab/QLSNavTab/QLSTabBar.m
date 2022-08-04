@@ -81,6 +81,21 @@
     
 }
 
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    
+    NSInteger count = self.tabItems.count;
+
+    CGFloat height = self.frame.size.height;
+    CGFloat width = self.frame.size.width / count;
+
+    for (int i=0; i<count; i++) {
+        QLSTabItem *tabItem = self.tabItems[i];
+        tabItem.tag = i;
+        tabItem.frame = CGRectMake(width * i, 0, width, height);
+    }
+}
+
 
 - (void)onItemClick:(QLSTabItem *)item{
 
