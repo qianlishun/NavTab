@@ -51,7 +51,8 @@ static float originTabbarHeight = 50;
     [super viewDidAppear: animated];
     // 删除self.tabBar中的子控件 除了自定义tabBar
     for (UIView *childView in self.tabBar.subviews) {
-        if (![childView isKindOfClass:[QLSTabBar class]]) {
+        if (![childView isKindOfClass:[QLSTabBar class]] &&
+            childView.tag != -999) {
             [childView removeFromSuperview];
         }
     }
@@ -150,11 +151,14 @@ static float originTabbarHeight = 50;
         
         [self addChildViewController:nav];
         
-        [theTabBar addItemWithIcon:[dict objectForKey:TAB_NORMAL_ICON] selectedIcon:[dict objectForKey:TAB_SELECTED_ICON]  title:[dict objectForKey:TAB_TITLE] titleColor:[dict objectForKey:TAB_TITLE_COLOR] selectedTitleColor:[dict objectForKey:TAB_TITLE_COLOR_SEL] font:self.tabbarFont];
+        [theTabBar addItemWithIcon:[dict objectForKey:TAB_NORMAL_ICON] selectedIcon:[dict objectForKey:TAB_SELECTED_ICON]  title:[dict objectForKey:TAB_TITLE] titleColor:[dict objectForKey:TAB_TITLE_COLOR] selectedTitleColor:[dict objectForKey:TAB_TITLE_COLOR_SEL] font:self.tabbarFont separatorColor:self.itemSeparatorColor];
         
     }
     self.tabBar.backgroundColor = self.tabbarBackgroundColor;
     theTabBar.backgroundColor = self.tabbarBackgroundColor;
+    if(self.topSeparatorColor){
+        [theTabBar setTopSeparatorColor:self.topSeparatorColor];
+    }
 }
 
 -(void)setNavigationBackgroundColor:(UIColor *)navigationBackgroundColor{

@@ -22,6 +22,7 @@
 		3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3C1D2C9EF000D6FD4F /* QLSTabBar.m */; };
 		3EDEFE461D2C9EF000D6FD4F /* QLSTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */; };
 		6E9798292893DB0800C0B7CC /* QLSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */; };
+		6EA5298B289D1B600042FA1F /* UIColor+QLSGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5298A289D1B600042FA1F /* UIColor+QLSGradient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabBarController.m; sourceTree = "<group>"; };
 		3EDEFE3F1D2C9EF000D6FD4F /* QLSTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabItem.h; sourceTree = "<group>"; };
 		3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabItem.m; sourceTree = "<group>"; };
+		6EA52989289D1B600042FA1F /* UIColor+QLSGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+QLSGradient.h"; sourceTree = "<group>"; };
+		6EA5298A289D1B600042FA1F /* UIColor+QLSGradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QLSGradient.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +274,8 @@
 				3EDEFE361D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m */,
 				3EDEFE371D2C9EF000D6FD4F /* UINavigationItem+Custom.h */,
 				3EDEFE381D2C9EF000D6FD4F /* UINavigationItem+Custom.m */,
+				6EA52989289D1B600042FA1F /* UIColor+QLSGradient.h */,
+				6EA5298A289D1B600042FA1F /* UIColor+QLSGradient.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				3EDEFE461D2C9EF000D6FD4F /* QLSTabItem.m in Sources */,
 				3E86C6631CE4BAEA00AC4BBD /* ThreeController.m in Sources */,
 				3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */,
+				6EA5298B289D1B600042FA1F /* UIColor+QLSGradient.m in Sources */,
 				3EDEFE411D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m in Sources */,
 				3E86C65D1CE4BAC700AC4BBD /* TwoController.m in Sources */,
 				3EDEFE431D2C9EF000D6FD4F /* QLSNavigationController.m in Sources */,

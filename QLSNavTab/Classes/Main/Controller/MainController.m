@@ -10,6 +10,8 @@
 #import "OneController.h"
 #import "TwoController.h"
 #import "ThreeController.h"
+#import "UIColor+QLSGradient.h"
+
 @interface MainController ()
 
 @end
@@ -25,6 +27,11 @@
     self.navTitleColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
 
     self.tabbarBackgroundColor =  [UIColor colorWithRed:arc4random_uniform (256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+    
+    UIColor *gradientColor = [UIColor gradientColorWithSize:CGSizeMake(1, 30) direction:GradientColorDirectionVertical colors:@[[UIColor colorWithRed:33/255.0 green:37/255.0 blue:47/255.0 alpha:1.0], [UIColor colorWithRed:52/255.0 green:58/255.0 blue:70/255.0 alpha:1.0], [UIColor colorWithRed:33/255.0 green:37/255.0 blue:47/255.0 alpha:1.0]]];
+                                  
+    self.topSeparatorColor = [UIColor orangeColor];
+    self.itemSeparatorColor = gradientColor;
 
     // 设置自定义高度
     self.tabbarHeight = 60;

@@ -10,6 +10,7 @@
 
 @interface QLSTabBar ()
 @property(nonatomic, strong) NSMutableArray *tabItems;
+@property(nonatomic, strong) UIView *separatorView;
 @end
 
 @implementation QLSTabBar
@@ -19,13 +20,17 @@
     self = [super initWithFrame:frame];
     if (self) {
         _tabItems = [NSMutableArray array];
+        _separatorView = [UIView new];
+        _separatorView.tag = -999;
+        _separatorView.backgroundColor = [UIColor clearColor];
+        [self addSubview:_separatorView];
     }
     return self;
 }
 - (void)test:(id)sender{
     NSLog(@"test");
 }
--(void)addItemWithIcon:(id)icon selectedIcon:(id)icon_selected title:(NSString *)title titleColor:(UIColor *)titleColor selectedTitleColor:(UIColor *)selectedTitleColor font:(UIFont *)font{
+-(void)addItemWithIcon:(id)icon selectedIcon:(id)icon_selected title:(NSString *)title titleColor:(UIColor *)titleColor selectedTitleColor:(UIColor *)selectedTitleColor font:(UIFont *)font separatorColor:(UIColor *)separatorColor{
 
     QLSTabItem *item = [[QLSTabItem alloc]init];
 
@@ -79,6 +84,9 @@
         tabItem.frame = CGRectMake(width * i, 0, width, height);
     }
     
+    if(count>=1){
+        [item setSeparatorColor:separatorColor];
+    }
 }
 
 -(void)layoutSubviews{
@@ -94,6 +102,8 @@
         tabItem.tag = i;
         tabItem.frame = CGRectMake(width * i, 0, width, height);
     }
+    [self bringSubviewToFront:self.separatorView];
+    [self.separatorView setFrame:CGRectMake(0, 0, self.frame.size.width, 1)];
 }
 
 
@@ -130,6 +140,10 @@
     if(item){
         self.selectedItem = item;
     }
+}
+
+- (void)setTopSeparatorColor:(UIColor *)color{
+    self.separatorView.backgroundColor = color;
 }
 
 - (UIImage *)getImageFrom:(id)imageInfo {

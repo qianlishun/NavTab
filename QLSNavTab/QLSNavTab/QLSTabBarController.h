@@ -50,4 +50,10 @@ static NSString * TAB_TITLE_COLOR_SEL = @"TITLE_COLOR_SEL";
 /** 自定义 tabbar  字体*/
 @property(nonatomic, strong) UIFont *tabbarFont;
 
+/** 自定义 顶部分割线颜色*/
+@property(nonatomic, strong) UIColor *topSeparatorColor;
+
+/** 自定义 item 之间的分割线颜色*/
+@property(nonatomic, strong) UIColor *itemSeparatorColor;
+
 @end

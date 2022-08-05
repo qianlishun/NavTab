@@ -12,4 +12,5 @@
 
 @interface QLSTabItem : UIButton
 
+- (void)setSeparatorColor:(UIColor*)color;
 @end

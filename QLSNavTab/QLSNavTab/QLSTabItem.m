@@ -9,7 +9,9 @@
 #import "QLSTabItem.h"
 
 #define kDockItemSelectedBg @"tabbar_slider.png"
-
+@interface QLSTabItem()
+@property(nonatomic, strong) UIView *separatorView;
+@end
 @implementation QLSTabItem
 - (instancetype)init
 {
@@ -21,10 +23,23 @@
         [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        
     }
     return self;
 }
 
+- (void)setSeparatorColor:(UIColor *)color{
+    self.separatorView.backgroundColor = color;
+}
+
+- (UIView *)separatorView{
+    if(!_separatorView){
+        _separatorView = [UIView new];
+        [self addSubview:_separatorView];
+    }
+    return _separatorView;
+}
 #pragma mark 覆盖父类在highlighted时的所有操作
 -(void)setHighlighted:(BOOL)highlighted{
 
@@ -40,6 +55,11 @@
     if (self.titleLabel.text.length) {
         imageH = contentRect.size.height * (1-kTitleRatio);
     }
+    
+    if(_separatorView){
+        _separatorView.frame = CGRectMake(0, 0.3*self.bounds.size.height, 1,  0.4*self.bounds.size.height);
+    }
+    
     return CGRectMake(imageX, imageY+imageH*0.05, imageW, imageH*0.9);
 
 }

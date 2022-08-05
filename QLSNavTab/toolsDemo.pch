@@ -6,6 +6,6 @@
 //  Copyright © 2015年 QLS. All rights reserved.
 //
 #define kWIDTH [UIScreen mainScreen].bounds.size.width
-#define kSize self.bounds.size
+#define kSize (self.bounds.size)
 #define ScreenFrame [UIScreen mainScreen].bounds
 
