@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"My";
+    self.navigationItem.title = @"My";
 
     UIButton *btn = [self buttonWithAction:@selector(jumpToFour) andTitle:@"push跳转"];
     btn.center = CGPointMake(kWIDTH/2, 100);

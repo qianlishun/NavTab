@@ -49,13 +49,6 @@ static float originTabbarHeight = 50;
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear: animated];
-    // 删除self.tabBar中的子控件 除了自定义tabBar
-    for (UIView *childView in self.tabBar.subviews) {
-        if (![childView isKindOfClass:[QLSTabBar class]] &&
-            childView.tag != -999) {
-            [childView removeFromSuperview];
-        }
-    }
 }
 
 #pragma mark 初始化TabBar
@@ -178,6 +171,15 @@ static float originTabbarHeight = 50;
     CGFloat bottomMargin = self.view.bounds.size.height - originTabbarHeight-self.tabBar.frame.origin.y;
     CGRect frame = CGRectMake(self.tabBar.frame.origin.x, self.tabBar.frame.size.height-self.tabbarHeight-bottomMargin, self.tabBar.frame.size.width, self.tabbarHeight);
     [theTabBar setFrame:frame];
+    
+    // 删除self.tabBar中的子控件 除了自定义tabBar
+    for (UIView *childView in self.tabBar.subviews) {
+        if (![childView isKindOfClass:[QLSTabBar class]] &&
+            childView.tag != -999) {
+            [childView removeFromSuperview];
+        }
+    }
+    
 }
 
 -(void)dealloc{

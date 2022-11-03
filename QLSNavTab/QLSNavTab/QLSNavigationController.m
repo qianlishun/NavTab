@@ -70,6 +70,11 @@
 
 - (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
     
+    if([viewControllerToPresent isKindOfClass:[UIAlertController class]]){
+        [super presentViewController:viewControllerToPresent animated:flag completion:completion];
+        return;
+    }
+    
     QLSNavigationController *nav = [[QLSNavigationController alloc]initWithRootViewController:viewControllerToPresent];
 
     if (@available(iOS 13.0, *)) {
