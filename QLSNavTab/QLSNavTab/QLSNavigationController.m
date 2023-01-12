@@ -7,6 +7,8 @@
 //
 
 #import "QLSNavigationController.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "UIImage+Extension.h"
 
 @interface QLSNavigationController ()<UINavigationControllerDelegate>
 @property(nonatomic, strong) UIColor *titleColor;
@@ -55,12 +57,28 @@
     //self - 导航控制器
     if(self.viewControllers.count){
         viewController.hidesBottomBarWhenPushed = YES;
-    }
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.topViewController.navigationItem.backBarButtonItem = backItem;
+    
+        UIImage *backImage;
+        if (@available(iOS 13.0, *)) {
+            backImage = [UIImage systemImageNamed:@"chevron.backward"];
+        }
+        if(!backImage){
+            backImage = [[UIImage imageNamed:@"icon_back"] scaleToSize:CGSizeMake(30, 30)];
+        }
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:backImage style:UIBarButtonItemStylePlain target:self action:@selector(onCustomPop:)];
 
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                              initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                              target:nil action:nil];
+        negativeSpacer.width = 15;
+        viewController.navigationItem.leftBarButtonItems = @[negativeSpacer,backItem];
+      
+        if(self.titleColor){
+            [backItem setTitleTextAttributes:@{NSForegroundColorAttributeName:_titleColor} forState:UIControlStateNormal];
+        }
+    }
     if(self.titleColor){
-        [self.navigationItem.backBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:_titleColor} forState:UIControlStateNormal];
+        [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:_titleColor} forState:UIControlStateNormal];
     }
 
     // 调用系统默认做法
@@ -69,20 +87,33 @@
 }
 
 - (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
-    
     if([viewControllerToPresent isKindOfClass:[UIAlertController class]]){
         [super presentViewController:viewControllerToPresent animated:flag completion:completion];
         return;
     }
-    
     QLSNavigationController *nav = [[QLSNavigationController alloc]initWithRootViewController:viewControllerToPresent];
 
+    UIImage *backImage;
     if (@available(iOS 13.0, *)) {
-        viewControllerToPresent.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage systemImageNamed:@"chevron.backward"] style:UIBarButtonItemStylePlain target:self action:@selector(onCustomDismiss:)];
-    } else {
-        viewControllerToPresent.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"<" style:UIBarButtonItemStylePlain target:self action:@selector(onCustomDismiss:)];
+        backImage = [UIImage systemImageNamed:@"chevron.backward"];
     }
-
+    if(!backImage){
+        backImage = [[UIImage imageNamed:@"icon_back"] scaleToSize:CGSizeMake(30, 30)];
+    }
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:backImage style:UIBarButtonItemStylePlain target:self action:@selector(onCustomDismiss:)];
+    
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                          initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                          target:nil action:nil];
+    /**
+        *  width为负数时，相当于btn向右移动width数值个像素，
+        由于按钮本身和边界间距为5pix，所以width设为-5时，间距正好调整为0；
+        width为正数时，正好相反，相当于往左移动width数值个像素
+         */
+    negativeSpacer.width = 15;
+    
+    viewControllerToPresent.navigationItem.leftBarButtonItems = @[negativeSpacer,backItem];
+    
     if(self.titleColor){
         [nav.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:_titleColor} forState:UIControlStateNormal];
     }
@@ -93,6 +124,10 @@
 
 - (void)onCustomDismiss:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)onCustomPop:(id)sender{
+    [self popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

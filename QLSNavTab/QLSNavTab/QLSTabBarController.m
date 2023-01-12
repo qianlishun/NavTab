@@ -147,8 +147,7 @@ static float originTabbarHeight = 50;
         [theTabBar addItemWithIcon:[dict objectForKey:TAB_NORMAL_ICON] selectedIcon:[dict objectForKey:TAB_SELECTED_ICON]  title:[dict objectForKey:TAB_TITLE] titleColor:[dict objectForKey:TAB_TITLE_COLOR] selectedTitleColor:[dict objectForKey:TAB_TITLE_COLOR_SEL] font:self.tabbarFont separatorColor:self.itemSeparatorColor];
         
     }
-    self.tabBar.backgroundColor = self.tabbarBackgroundColor;
-    theTabBar.backgroundColor = self.tabbarBackgroundColor;
+    [self setTabbarBackgroundColor:self.tabbarBackgroundColor];
     if(self.topSeparatorColor){
         [theTabBar setTopSeparatorColor:self.topSeparatorColor];
     }
@@ -158,7 +157,22 @@ static float originTabbarHeight = 50;
     _navigationBackgroundColor = navigationBackgroundColor;
 }
 
-
+- (void)setTabbarBackgroundColor:(UIColor *)tabbarBackgroundColor{
+    _tabbarBackgroundColor = tabbarBackgroundColor;
+    self.tabBar.backgroundColor = self.tabbarBackgroundColor;
+    theTabBar.backgroundColor = self.tabbarBackgroundColor;
+    if (@available (iOS 15.0, *)) {
+        // iOS 15.0 及以上
+        UITabBarAppearance *appearance = [[UITabBarAppearance alloc] init];
+        [appearance configureWithOpaqueBackground];
+        appearance.backgroundColor = self.tabbarBackgroundColor;
+        
+        self.tabBar.standardAppearance = appearance;
+        self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance;
+    } else {
+        self.tabBar.barTintColor = self.tabbarBackgroundColor;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

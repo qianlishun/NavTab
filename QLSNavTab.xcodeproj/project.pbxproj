@@ -21,6 +21,8 @@
 		3EDEFE431D2C9EF000D6FD4F /* QLSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3A1D2C9EF000D6FD4F /* QLSNavigationController.m */; };
 		3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3C1D2C9EF000D6FD4F /* QLSTabBar.m */; };
 		3EDEFE461D2C9EF000D6FD4F /* QLSTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */; };
+		6E236B5B296FAC2600C597EA /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E236B59296FAC2600C597EA /* UINavigationController+FDFullscreenPopGesture.m */; };
+		6E236B60296FACB500C597EA /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E236B5F296FACB400C597EA /* UIImage+Extension.m */; };
 		6E9798292893DB0800C0B7CC /* QLSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */; };
 		6EA5298B289D1B600042FA1F /* UIColor+QLSGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA5298A289D1B600042FA1F /* UIColor+QLSGradient.m */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,10 @@
 		3EDEFE3E1D2C9EF000D6FD4F /* QLSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabBarController.m; sourceTree = "<group>"; };
 		3EDEFE3F1D2C9EF000D6FD4F /* QLSTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLSTabItem.h; sourceTree = "<group>"; };
 		3EDEFE401D2C9EF000D6FD4F /* QLSTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLSTabItem.m; sourceTree = "<group>"; };
+		6E236B59296FAC2600C597EA /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		6E236B5D296FAC4A00C597EA /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		6E236B5E296FACB400C597EA /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		6E236B5F296FACB400C597EA /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		6EA52989289D1B600042FA1F /* UIColor+QLSGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+QLSGradient.h"; sourceTree = "<group>"; };
 		6EA5298A289D1B600042FA1F /* UIColor+QLSGradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QLSGradient.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,8 +280,12 @@
 				3EDEFE361D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m */,
 				3EDEFE371D2C9EF000D6FD4F /* UINavigationItem+Custom.h */,
 				3EDEFE381D2C9EF000D6FD4F /* UINavigationItem+Custom.m */,
+				6E236B5D296FAC4A00C597EA /* UINavigationController+FDFullscreenPopGesture.h */,
+				6E236B59296FAC2600C597EA /* UINavigationController+FDFullscreenPopGesture.m */,
 				6EA52989289D1B600042FA1F /* UIColor+QLSGradient.h */,
 				6EA5298A289D1B600042FA1F /* UIColor+QLSGradient.m */,
+				6E236B5E296FACB400C597EA /* UIImage+Extension.h */,
+				6E236B5F296FACB400C597EA /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -411,12 +421,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E236B5B296FAC2600C597EA /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				3EDEFE421D2C9EF000D6FD4F /* UINavigationItem+Custom.m in Sources */,
 				3EDEFE461D2C9EF000D6FD4F /* QLSTabItem.m in Sources */,
 				3E86C6631CE4BAEA00AC4BBD /* ThreeController.m in Sources */,
 				3EDEFE441D2C9EF000D6FD4F /* QLSTabBar.m in Sources */,
 				6EA5298B289D1B600042FA1F /* UIColor+QLSGradient.m in Sources */,
 				3EDEFE411D2C9EF000D6FD4F /* UIBarButtonItem+QLS.m in Sources */,
+				6E236B60296FACB500C597EA /* UIImage+Extension.m in Sources */,
 				3E86C65D1CE4BAC700AC4BBD /* TwoController.m in Sources */,
 				3EDEFE431D2C9EF000D6FD4F /* QLSNavigationController.m in Sources */,
 				3E30FBE51CE4282C009E9F9C /* MainController.m in Sources */,
